@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px;
+    position: relative;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.width-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.width-input-container label {
+    margin-right: 10px;
+}
+
+.width-input-container input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output-container {
+    position: relative;
+    margin-top: 20px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+#output {
+    width: 780px;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+#copyIcon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.5rem;
+    display: none; /* Initially hidden */
+}
+
+#copyIcon.show {
+    display: inline-block; /* Display when shown */
+    animation: iconFade 1s ease-in-out forwards; /* Animation */
+}
+
+@keyframes iconFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.copied {
+    color: #28a745;
+}

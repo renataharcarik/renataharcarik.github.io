@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Image Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9b11238aee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown to HTML Image Converter</h1>
+        <textarea id="markdownInput" placeholder="Enter markdown image text here...">
+            ![Image](https://media.github.tools.sap/user/103612/files/686b5e3a-6e7c-4108-91c9-9c81cf54591a)
+            ![Image](https://media.github.tools.sap/user/103612/files/686b5e3a-6e7c-4108-91c9-9c81cf54591a)</textarea>
+        <div class="width-input-container">
+            <label for="widthInput">Image Width</label>
+            <input type="number" id="widthInput" value="250">
+            <span>px</span>
+        </div>
+        <button id="convertButton">Convert</button>
+        <div id="output-container">
+            <div id="output"></div>
+            <div id="copyIcon" onclick="copyToClipboard()"><i class="fa-solid fa-copy" style="color: #007bff;"></i></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
