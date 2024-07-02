@@ -62,15 +62,15 @@ button:hover {
     background-color: #0056b3;
 }
 
-#output-container {
+#output-container, #table-output-container {
     position: relative;
     margin-top: 20px;
     word-wrap: break-word;
     text-align: left;
 }
 
-#output {
-    width: 780px;
+#output, #table-output {
+    width: calc(100%-20px);
     min-height: 100px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -79,7 +79,7 @@ button:hover {
     position: relative;
 }
 
-#copyIcon {
+#copyIcon, #copyTableIcon {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -89,7 +89,7 @@ button:hover {
     display: none; /* Initially hidden */
 }
 
-#copyIcon.show {
+#copyIcon.show, #copyTableIcon.show {
     display: inline-block; /* Display when shown */
     animation: iconFade 1s ease-in-out forwards; /* Animation */
 }
