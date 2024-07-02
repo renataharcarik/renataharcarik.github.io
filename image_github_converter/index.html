@@ -10,9 +10,8 @@
 <body>
     <div class="container">
         <h1>Markdown to HTML Image Converter</h1>
-        <textarea id="markdownInput" placeholder="Enter markdown image text here...">
-            ![Image](https://media.github.tools.sap/user/103612/files/686b5e3a-6e7c-4108-91c9-9c81cf54591a)
-            ![Image](https://media.github.tools.sap/user/103612/files/686b5e3a-6e7c-4108-91c9-9c81cf54591a)</textarea>
+        <span> When you upload images to Github they are uploaded with their original size. To keep the documentation nice and clean, you can convert the provided github markdown to an html format, where you can set the desired image width. Simply copy the generated html and paste it to your github comment or issue. First option puts the images below each other, each image in one line, option two creates a simple two-column table. </span>
+        <textarea id="markdownInput" placeholder="Enter markdown image text here..."></textarea>
         <div class="width-input-container">
             <label for="widthInput">Image Width</label>
             <input type="number" id="widthInput" value="250">
@@ -20,8 +19,14 @@
         </div>
         <button id="convertButton">Convert</button>
         <div id="output-container">
+            <span>Markdown for images below each other:</span>
             <div id="output"></div>
-            <div id="copyIcon" onclick="copyToClipboard()"><i class="fa-solid fa-copy" style="color: #007bff;"></i></div>
+            <div id="copyIcon" onclick="copyToClipboard()"><i class="fas fa-copy"></i></div>
+        </div>
+        <div id="table-output-container">
+            <span>Markdown for a two column table with images. Copy below text into a github comment to use:</span>
+            <div id="table-output"></div>
+            <div id="copyTableIcon" onclick="copyTableToClipboard()"><i class="fas fa-copy"></i></div>
         </div>
     </div>
     <script src="script.js"></script>

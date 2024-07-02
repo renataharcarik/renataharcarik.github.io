@@ -18,24 +18,57 @@ function copyToClipboard() {
     });
 }
 
+function copyTableToClipboard() {
+    const tableOutputDiv = document.getElementById('table-output');
+    const textToCopy = tableOutputDiv.innerText;
+
+    navigator.clipboard.writeText(textToCopy).then(function() {
+        const copyTableIcon = document.getElementById('copyTableIcon');
+        copyTableIcon.innerHTML = '<i class="fas fa-check-circle"></i>';
+        copyTableIcon.style.color = '#28a745';
+        copyTableIcon.classList.add('show');
+
+        setTimeout(function() {
+            copyTableIcon.innerHTML = '<i class="fas fa-copy"></i>';
+            copyTableIcon.style.color = '#007bff';
+            copyTableIcon.classList.remove('show');
+        }, 1000);
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+
 document.getElementById('convertButton').addEventListener('click', function() {
     const markdownInput = document.getElementById('markdownInput').value;
     const outputDiv = document.getElementById('output');
-    const copyIcon = document.getElementById('copyIcon');
+    const tableOutputDiv = document.getElementById('table-output');
     const widthInput = document.getElementById('widthInput').value;
 
     const lines = markdownInput.split('\n');
     const regex = /!\[.*\]\((.*)\)/;
     let htmlOutput = '';
+    let tableOutput = '| First Header  | Second Header |\n| ------------- | ------------- |\n';
 
-    lines.forEach(line => {
+    let row = [];
+
+    lines.forEach((line) => {
         const match = line.match(regex);
         if (match && match[1]) {
             const imageUrl = match[1];
             const htmlImage = `<img src="${imageUrl}" width="${widthInput}px">`;
             htmlOutput += htmlImage + '<br>';
+            row.push(htmlImage);
+
+            if (row.length === 2) {
+                tableOutput += `| ${row.join(' | ')} |\n`;
+                row = [];
+            }
         }
     });
+
+    if (row.length === 1) {
+        tableOutput += `| ${row[0]} | |\n`;
+    }
 
     if (htmlOutput) {
         const escapedHtmlOutput = htmlOutput.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/<br>/g, '&lt;br&gt;\n');
@@ -44,5 +77,13 @@ document.getElementById('convertButton').addEventListener('click', function() {
     } else {
         outputDiv.innerHTML = 'Invalid markdown image syntax';
         copyIcon.style.display = 'none';
+    }
+
+    if (tableOutput) {
+        tableOutputDiv.innerText = tableOutput;
+        document.getElementById('copyTableIcon').style.display = 'inline-block';
+    } else {
+        tableOutputDiv.innerHTML = 'Invalid markdown image syntax';
+        document.getElementById('copyTableIcon').style.display = 'none';
     }
 });
