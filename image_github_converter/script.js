@@ -98,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
             if (content.style.display === "block") {
+                this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
                 content.style.display = "none";
             } else {
                 content.style.display = "block";
+                this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
             }
         });
     }

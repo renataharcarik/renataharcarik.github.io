@@ -124,14 +124,13 @@ button:hover {
    
 }
 
-.collapsible.active i {
-    transform: rotate(180deg);
-    transition: transform .5s ease;
-}
-
 .collapsible i {
     margin-left: 5px;
-    transition: transform 0.5s ease;
+}
+
+@keyframes changeHeight {
+    0% { height: 0; }
+    100% { height: 100px; }
 }
 
 .read-more {
@@ -141,5 +140,6 @@ button:hover {
     background-color: #ffffff;
     border-radius: 4px;
     margin-bottom: 10px;
-    transition: max-height 1.5s ease;
+    animation: changeHeight 0.3s ease;
 }
+
