@@ -20,3 +20,7 @@ the images smaller easier, I created this app.
 
 #### Copy to Clipboard
 ![ScreenRecording2024-07-02at18 54 59-ezgif com-video-to-gif-converter](https://github.com/renataharcarik/renataharcarik.github.io/assets/75941985/d92646a8-8c77-4408-8fc6-c31090db4eb1)
+
+## Video tutorial
+https://github.com/renataharcarik/renataharcarik.github.io/assets/75941985/f0ec0c85-2de7-4ab0-9070-560c61af46f2
+
