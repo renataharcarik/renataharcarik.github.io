@@ -38,6 +38,7 @@ function copyTableToClipboard() {
     });
 }
 
+// Convert button script
 document.getElementById('convertButton').addEventListener('click', function() {
     const markdownInput = document.getElementById('markdownInput').value;
     const outputDiv = document.getElementById('output');
@@ -108,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//When you press enter in the input field, it will trigger the convert button
 document.getElementById('markdownInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
@@ -115,6 +117,7 @@ document.getElementById('markdownInput').addEventListener('keypress', function(e
     }
 });
 
+//When you press enter in the width field, it will trigger the convert button
 document.getElementById('widthInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
