@@ -71,7 +71,7 @@ button:hover {
 }
 
 #output, #table-output {
-    width: 100%;
+    width: calc(100%-20px);
     min-height: 100px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -142,4 +142,5 @@ button:hover {
     margin-bottom: 10px;
     animation: changeHeight 0.3s ease;
 }
+
 
