@@ -108,4 +108,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.getElementById('markdownInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('convertButton').click();
+    }
+});
+
+document.getElementById('widthInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('convertButton').click();
+    }
+});
+
 
