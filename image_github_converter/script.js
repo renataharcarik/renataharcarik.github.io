@@ -81,9 +81,29 @@ document.getElementById('convertButton').addEventListener('click', function() {
 
     if (tableOutput) {
         tableOutputDiv.innerText = tableOutput;
-        document.getElementById('copyTableIcon').style.display = 'inline-block';
+        document.getElementById('copyTableIcon').style.display = 'block';
     } else {
         tableOutputDiv.innerHTML = 'Invalid markdown image syntax';
         document.getElementById('copyTableIcon').style.display = 'none';
+    }  
+});
+
+// Collapsible section script
+document.addEventListener('DOMContentLoaded', function() {
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
     }
 });
+
+
