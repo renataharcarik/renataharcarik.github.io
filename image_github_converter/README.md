@@ -1,8 +1,5 @@
-# The Markdown to HTML Image Converter
-is a simple app I created to help me reduce image size of images uploaded to Github. As a front-end developer I regularly use
-a before and after approach to showcase my changes. As a former tech-writer I also want to keep the github issues clean and concise as much as
-possible. Pasting an image to github directly sometimes results in gigantic images splattered over the whole screen. To make the process of making
-the images smaller easier, I created this app.
+# Markdown to HTML Image Converter
+This app helps to reduce the size of images uploaded to GitHub. It converts Markdown image syntax to HTML with a specified width, keeping GitHub issues clean and concise. The app is useful for front-end developers to showcase before-and-after changes with smaller images.
 
 | Before | After |
 | ------------- | ------------- |
@@ -23,4 +20,3 @@ the images smaller easier, I created this app.
 
 ## Video tutorial
 https://github.com/renataharcarik/renataharcarik.github.io/assets/75941985/f0ec0c85-2de7-4ab0-9070-560c61af46f2
-
