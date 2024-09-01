@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Brno</title>
+    <style>
+        body {
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .map {
+            width: 500px;
+            height: 400px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brno_location_map.png/800px-Brno_location_map.png'); /* Example Brno map image */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="map"></div>
+        <button class="button" onclick="navigateToCategories()">Get to know Brno</button>
+    </div>
+
+    <script>
+        function navigateToCategories() {
+            window.location.href = 'categories.html';
+        }
+    </script>
+</body>
+</html>
