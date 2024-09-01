@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dějiny Brna</title>
+</head>
+<body>
+    <div class="content">
+        Dějiny Brna začínají v raném středověku, přičemž první písemná zmínka pochází z roku
+        <span class="hidden-text" id="year">1091</span><button class="reveal-button" onclick="revealText('year')">[Zobrazit]</button>.
+        Trvalé lidské osídlení zde však existovalo již dlouhou dobu před tímto datem, přímým předchůdcem města je slovanské hradiště
+        <span class="hidden-text" id="place">Staré Zámky</span><button class="reveal-button" onclick="revealText('place')">[Zobrazit]</button>.
+        První doklady o přítomnosti člověka na území současného Brna pochází již 
+        <span class="hidden-text" id="era">z pravěku</span><button class="reveal-button" onclick="revealText('era')">[Zobrazit]</button>.
+        <br><br>
+        Nejstarším dokladem lidského osídlení území Brna je rukou opracovaný kámen nalezený na Červeném kopci starý přibližně 
+        <span class="hidden-text" id="year2">700 000</span><button class="reveal-button" onclick="revealText('year2')">[Zobrazit]</button> let. V oblasti Brna žil také člověk kromaňonský.
+        Významným nalezištěm se stopami osídlení starší doby kamenné je <span class="hidden-text" id="skala">Stranská skála</span><button class="reveal-button" onclick="revealText('skala')">[Zobrazit]</button>.
+    </div>
+
+    <script>
+        function revealText(id) {
+            document.getElementById(id).classList.add('revealed');
+            event.target.style.display = 'none'; // Hide the button after revealing the text
+        }
+    </script>
+</body>
+</html>

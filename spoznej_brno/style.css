@@ -1,0 +1,113 @@
+body {
+    background-color: rgba(231, 227, 219, 0.886);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    animation: fade 3s infinite alternate;
+    color:rgb(55, 54, 54);
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+.map {
+    width: 500px;
+    height: 400px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Brno_location_map.png/800px-Brno_location_map.png');
+    /* Example Brno map image */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+/* CSS */
+.button {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button:hover,
+.button:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+.content {
+    text-align: center;
+    font-size: 20px;
+    width: 60%;
+    line-height: 1.6;
+}
+.hidden-text {
+    display: none;
+    color: #4CAF50;
+    cursor: pointer;
+    font-weight: bold;
+}
+.revealed {
+    display: inline;
+}
+.reveal-button {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    font: inherit;
+    padding: 0;
+}
